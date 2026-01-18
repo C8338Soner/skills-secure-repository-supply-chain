@@ -1,6 +1,13 @@
 version: 2
 updates:
+  # npm/pnpm bağımlılıkları için
+  - package-ecosystem: "npm"
+    directory: "/" # Kök dizin
+    schedule:
+      interval: "daily"
+
+  # GitHub Actions iş akışlarını güncellemek için
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "daily"
